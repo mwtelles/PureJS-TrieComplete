@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRIECOMPLETE</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="logo">TRIECOMPLETE</h1>
+      
+      <div id="search-container">
+
+        <button id="search-icon" aria-label="Ícone de pesquisa">
+          <i class="fas fa-search"></i>
+        </button>
+
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Digite para pesquisar..." 
+          aria-label="Campo de pesquisa" 
+        />
+
+        <label id="upload-button" for="wordlist-input" aria-label="Carregar lista de palavras">
+          <i class="fas fa-upload"></i>
+        </label>
+        <input 
+          type="file" 
+          id="wordlist-input" 
+          accept=".json" 
+          style="display: none;" 
+          aria-label="Seletor de arquivo"
+        />
+      </div>
+
+      <ul id="suggestions" aria-label="Sugestões de pesquisa">
+      </ul>
+    </div>
+
+    <script src="./js/Trie.js"></script>
+    <script src="./js/Autocomplete.js"></script>
+  </body>
+</html>
